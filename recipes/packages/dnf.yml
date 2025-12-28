@@ -1,0 +1,25 @@
+type: dnf
+repos:
+  copr:
+    - karellen/karellen-sysbox
+install:
+  skip-unavailable: true
+  packages:
+    - karellen-sysbox
+
+    # cli
+    - btop
+    - git
+    - micro
+    - neovim
+
+    # utils
+    - rclone
+    - rsync
+    - speedtest-cli
+
+    # management
+    - crontabs
+    - distrobox
+    - screen
+    - topgrade
