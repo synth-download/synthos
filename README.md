@@ -4,10 +4,11 @@ Repository containing our personalized [Fedora CoreOS](https://www.fedoraproject
 
 Based off of [uCore Minimal](https://github.com/ublue-os/ucore/).
 
-Refer to the [BlueBuild documentation](https://blue-build.org/how-to/setup/) and the [template repository](https://github.com/blue-build/template) for more information.
+Refer to the [BlueBuild documentation](https://blue-build.org/how-to/setup/) and the [template repository](https://github.com/blue-build/template) for image building information, and [Fedora CoreOS's](https://docs.fedoraproject.org/en-US/fedora-coreos/getting-started/) documentation for managing SynthOS itself.
 
 > [!NOTE]
-> This image is specifically customized and tuned for our own usage, of which probably won't fit others needs. With that said, our changes are also relatively minimal, but we suggest forking out configurations instead and making modifications as needed yourself.
+> This image is specifically customized and modified for our own usage, and includes settings and configurations that *only* apply to ourselves.
+> As is, this image *will not* work for others. If you're here to use this, it's best to instead fork or grab from this repository and modify things accordingly for yourself.
 
 ## Generate an ISO
 
@@ -18,6 +19,9 @@ sudo bluebuild generate-iso --iso-name synthos.iso image ghcr.io/synth-download/
 ```
 
 ## Rebase from CoreOS
+
+> [!WARNING]
+> These instructions have not been tested.
 
 If already on a CoreOS installation, you can switch to SynthOS via `rpm-ostree`.
 
