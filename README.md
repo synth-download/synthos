@@ -6,11 +6,16 @@ Based off of [uCore Minimal](https://github.com/ublue-os/ucore/).
 
 Refer to the [BlueBuild documentation](https://blue-build.org/how-to/setup/) and the [template repository](https://github.com/blue-build/template) for image building information, and [Fedora CoreOS's](https://docs.fedoraproject.org/en-US/fedora-coreos/getting-started/) documentation for managing SynthOS itself.
 
-> [!NOTE]
+> [!CAUTION]
 > This image is specifically customized and modified for our own usage, and includes settings and configurations that *only* apply to ourselves.
+>
 > As is, this image *will not* work for others. If you're here to use this, it's best to instead fork or grab from this repository and modify things accordingly for yourself.
 
-## Generate an ISO
+## Install
+
+An [ignition file](https://docs.fedoraproject.org/en-US/fedora-coreos/producing-ign/) is not required to install SynthOS as BlueBuild ends up packaging the Anaconda GUI installer with the image.
+
+### Generate an ISO
 
 An ISO image can be generated via [`bluebuild`](https://github.com/blue-build/cli), which is already bundled in BlueBuild created/maintained images.
 
@@ -18,7 +23,7 @@ An ISO image can be generated via [`bluebuild`](https://github.com/blue-build/cl
 sudo bluebuild generate-iso --iso-name synthos.iso image ghcr.io/synth-download/synthos
 ```
 
-## Rebase from CoreOS
+### Rebase from CoreOS
 
 > [!WARNING]
 > These instructions have not been tested.
