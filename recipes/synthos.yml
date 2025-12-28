@@ -1,0 +1,32 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: synthos
+description: synth.download's customized coreos image
+
+# use universal blue's ucore as our base ~ https://github.com/ublue-os/ucore
+base-image: ghcr.io/ublue-os/ucore-minimal
+image-version: stable
+
+# modules ~ refer to https://blue-build.org/learn/getting-started/
+modules:
+  - type: files
+    files:
+      - source: system/synthos
+        destination: /
+
+  - type: dnf
+    repos:
+      copr:
+        - atim/starship
+    install:
+      packages:
+        - micro
+        - starship
+    remove:
+      packages:
+        # example: removing firefox (in favor of the flatpak)
+        # "firefox" is the main package, "firefox-langpacks" is a dependency
+        - firefox
+        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
+  - type: signing
