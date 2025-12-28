@@ -15,5 +15,6 @@ modules:
   - type: script
     snippets:
       - "semanage port -a -t ssh_port_t -p tcp 6720" # assign selinux the new ssh port
+      - "firewall-cmd --add-port=6720/tcp --permanent" # allow ssh port in firewalld
 
   - type: signing # finalize
