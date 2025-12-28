@@ -9,7 +9,7 @@ Refer to the [BlueBuild documentation](https://blue-build.org/how-to/setup/) and
 > [!CAUTION]
 > This image is specifically customized and modified for our own usage, and includes settings and configurations that *only* apply to ourselves.
 >
-> As is, this image *will not* work for others. If you're here to use this, it's best to instead fork or grab from this repository and modify things accordingly for yourself.
+> As is, this image ***will not*** work for others. If you're here to use this, it's best to instead fork or grab from this repository and to modify things accordingly.
 
 ## Install
 

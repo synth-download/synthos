@@ -11,4 +11,9 @@ image-version: stable
 modules:
   - from-file: packages/dnf.yml # packages
   - from-file: files/synthos.yml # files
+
+  - type: script
+    snippets:
+      - "semanage port -a -t ssh_port_t -p tcp 6720" # assign selinux the new ssh port
+
   - type: signing # finalize
